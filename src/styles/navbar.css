@@ -1,0 +1,50 @@
+.navbar {
+	width: 100%;
+	height: 80px;
+	/* background-color: aquamarine; */
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+
+.logoDiv {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logoDiv img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.logoDiv p {
+	font-weight: bold;
+}
+
+.linkDiv a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.1rem;
+	margin: 0 5px 0 5px;
+	padding: 5px 8px;
+	color: black;
+	transition: all 0.3s ease-in-out;
+}
+
+.linkDiv a:hover {
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+}
+
+.buttonDiv .signInBtn {
+	background-color: white;
+	color: red;
+}
+
+.buttonDiv .signInBtn:hover {
+	background-color: red;
+	color: white;
+}
