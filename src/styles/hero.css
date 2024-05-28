@@ -13,53 +13,53 @@
 	height: 100%;
 }
 
-.innerContainer .heroContent {
+.heroContent {
 	width: 27%;
-	position: relative;
+	position: absolute;
 	top: 200px;
 	left: 12%;
 	/* background-color: aqua; */
 }
 
-.innerContainer .heroContent .firstP-Text {
+.heroContent .firstP-Text {
 	font-weight: bold;
 	margin-bottom: 5px;
 	font-size: 1.3rem;
 }
 
-.innerContainer .heroContent h1 {
+.heroContent h1 {
 	font-size: 2.6rem;
 	margin-bottom: 8px;
 }
 
-.innerContainer .heroContent span {
+.heroContent span {
 	color: red;
 }
 
-.innerContainer .heroContent .secondP-Text {
+.heroContent .secondP-Text {
 	font-size: 1rem;
 	margin-bottom: 15px;
 }
 
-.innerContainer .heroContent button {
+.heroContent button {
 	width: 130px;
 	/* height: 40px; */
 }
 
-.innerContainer .heroContent button .icon {
+.heroContent button .icon {
 	position: relative;
 	top: 5px;
 	left: 5px;
 	font-size: 20px;
 }
 
-.innerContainer .heroContent .learnMoreBtn {
+.heroContent .learnMoreBtn {
 	background-color: white;
 	color: red;
 	height: 42.4px;
 }
 
-/* .innerContainer .heroContent .learnMoreBtn:hover {
+/* .heroContent .learnMoreBtn:hover {
 	background-color: red;
 	color: white;
 
