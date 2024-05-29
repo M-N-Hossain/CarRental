@@ -25,7 +25,7 @@ function SelectInput({
 }
 
 function DateInput({
-  title, icon, value, onChange, showWarning, warningMessage,
+  title, icon, value, onChange, showWarning, warningMessage, minDate,
 }) {
   return (
     <div className="inputDiv">
@@ -36,7 +36,7 @@ function DateInput({
           <span> *</span>
         </p>
       </div>
-      <input type="date" value={value} onChange={onChange} />
+      <input type="date" min={minDate} value={value} onChange={onChange} />
       {showWarning && <div className="warning-message">{warningMessage}</div>}
     </div>
   );

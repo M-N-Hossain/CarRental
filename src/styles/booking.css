@@ -10,14 +10,20 @@
 .booking .innerContainer {
 	display: flex;
 	flex-wrap: wrap;
+	box-shadow: 0.5px 0.5px 2px;
+	border-radius: 5px;
+	padding-left: 5%;
+	margin-top: 1%;
 }
 
 .innerContainer button {
-	width: 30%;
+	width: 21%;
 	height: 40px;
 	position: relative;
 	top: 48px;
 	margin-left: 0px;
+	
+
 }
 
 .inputDiv {
@@ -82,4 +88,13 @@
 	font-size: 0.9em;
 	margin-top: 5px;
 	width: 100%;
+}
+
+.closeIcon {
+	cursor: pointer;
+	color: green;
+	transition: 1s;
+}
+.closeIcon:hover {
+	transform: scale(1.1);
 }

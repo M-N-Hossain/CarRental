@@ -5,6 +5,9 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import EventIcon from '@mui/icons-material/Event';
 import Alert from '@mui/material/Alert';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
+import CloseIcon from '@mui/icons-material/Close';
 import { SelectInput, DateInput } from './CustomInput';
 
 export default function Booking() {
@@ -15,6 +18,7 @@ export default function Booking() {
   const [dropOffDate, setDropOffDate] = useState('');
   const [isBookingDone, setIsBookingDone] = useState(false);
   const [bookingInfo, setBookingInfo] = useState({});
+  const [open, setOpen] = React.useState(true);
 
   // creating custom error for sequential error message
   const [showWarnings, setShowWarnings] = useState({
@@ -29,32 +33,35 @@ export default function Booking() {
     'Select your car type', 'Economy cars', 'Compact cars', 'Mid-size cars', 'SUVs',
   ];
 
-  const locations = ['Select pick-up location', 'Copenhagen-Central', 'Roskild', 'Farum', 'Norreport', 'Norrebro'];
+  const locations = ['Copenhagen-Central', 'Roskild', 'Farum', 'Norreport', 'Norrebro'];
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
+  const validateForm = () => {
     const validations = [
-      { field: 'carType', value: carType, message: carType === 'Select your car type' || !carType },
-      { field: 'pickUpLocation', value: pickUpLocation, message: pickUpLocation === 'Select pick-up location' || !pickUpLocation },
-      { field: 'dropOffLocation', value: dropOffLocation, message: dropOffLocation === 'Select drop-off location' || !dropOffLocation },
-      { field: 'pickUpDate', value: pickUpDate, message: !pickUpDate },
-      { field: 'dropOffDate', value: dropOffDate, message: !dropOffDate },
+      { field: 'carType', message: carType === 'Select your car type' || !carType },
+      { field: 'pickUpLocation', message: pickUpLocation === 'Select pick-up location' || !pickUpLocation },
+      { field: 'dropOffLocation', message: dropOffLocation === 'Select drop-off location' || !dropOffLocation },
+      { field: 'pickUpDate', message: !pickUpDate },
+      { field: 'dropOffDate', message: !dropOffDate },
     ];
-
     // find out the error as the user have to choose something else other than the default value
     // eslint-disable-next-line no-restricted-syntax
     for (const validation of validations) {
       if (validation.message) {
-        setShowWarnings({
-          carType: validation.field === 'carType',
-          pickUpLocation: validation.field === 'pickUpLocation',
-          dropOffLocation: validation.field === 'dropOffLocation',
-          pickUpDate: validation.field === 'pickUpDate',
-          dropOffDate: validation.field === 'dropOffDate',
-        });
-        return;
+        setShowWarnings((prevWarnings) => ({
+          ...prevWarnings,
+          [validation.field]: true,
+        }));
+        return false;
       }
+    }
+    return true;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!validateForm()) {
+      return;
     }
 
     // submission logic
@@ -78,6 +85,7 @@ export default function Booking() {
     setDropOffLocation('');
     setPickUpDate('');
     setDropOffDate('');
+    setOpen(true);
   };
 
   // Higher order function
@@ -91,6 +99,13 @@ export default function Booking() {
       }));
     }
   };
+
+  // Getting the local dates from generic UTC time
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const localDate = `${year}-${month}-${day}`;
 
   return (
     <div className="booking">
@@ -130,6 +145,7 @@ export default function Booking() {
           title="Pick-Up-Date"
           icon={<EventIcon className="icon" />}
           value={pickUpDate}
+          minDate={localDate}
           onChange={handleSelectInputChange(setPickUpDate, 'pickUpDate')}
           showWarning={showWarnings.pickUpDate}
           warningMessage="Please select a valid pick-up date."
@@ -139,6 +155,9 @@ export default function Booking() {
           title="Drop-Off-Date"
           icon={<EventIcon className="icon" />}
           value={dropOffDate}
+          // in this case min date should be pickup date to avoide dates confusion
+          //  as user cant make the drop off before pick up
+          minDate={pickUpDate}
           onChange={handleSelectInputChange(setDropOffDate, 'dropOffDate')}
           showWarning={showWarnings.dropOffDate}
           warningMessage="Please select a valid drop-off date."
@@ -146,13 +165,29 @@ export default function Booking() {
         <button type="submit">Search</button>
       </form>
       {isBookingDone && (
-      <Alert severity="success">
-        {` Form submitted with: Car Type: ${bookingInfo.carType}, Pick up location:
-        ${bookingInfo.pickUpLocation}, Pick up date:
-        ${bookingInfo.pickUpDate}, Drop off location:
-        ${bookingInfo.dropOffLocation}, Drop off date:
-        ${bookingInfo.dropOffDate}`}
-      </Alert>
+      <Box sx={{ width: '100%' }} marginTop="2%">
+        <Collapse in={open}>
+          <Alert
+            severity="success"
+            action={(
+              <CloseIcon
+                className="closeIcon"
+                onClick={() => {
+                  setOpen(false);
+                  setIsBookingDone(false);
+                }}
+              />
+            )}
+            sx={{ mb: 2 }}
+          >
+            {` Form submitted with: Car Type: ${bookingInfo.carType}, Pick up location:
+            ${bookingInfo.pickUpLocation}, Pick up date:
+            ${bookingInfo.pickUpDate}, Drop off location:
+            ${bookingInfo.dropOffLocation}, Drop off date:
+            ${bookingInfo.dropOffDate}`}
+          </Alert>
+        </Collapse>
+      </Box>
       )}
     </div>
   );
