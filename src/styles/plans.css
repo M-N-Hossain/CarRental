@@ -1,0 +1,17 @@
+.plansOuterContainer {
+	width: 70%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 10%;
+	text-align: center;
+}
+
+.plansInnerContainer {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
