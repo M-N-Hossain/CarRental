@@ -6,7 +6,7 @@ export default function Navbar() {
     <div className="navbar">
       {/* logo */}
       <div className="logoDiv">
-        <img src="src\assets\logo.png" alt="" />
+        <img src="../assets/logo.png" alt="" />
         <div className="title">
           <h3>CAR</h3>
           <p>Rental</p>
