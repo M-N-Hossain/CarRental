@@ -1,12 +1,13 @@
 import React from 'react';
 import '../styles/navbar.css';
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
   return (
     <div className="navbar">
       {/* logo */}
       <div className="logoDiv">
-        <img src="../assets/logo.png" alt="" />
+        <img src={logo} alt="" />
         <div className="title">
           <h3>CAR</h3>
           <p>Rental</p>
