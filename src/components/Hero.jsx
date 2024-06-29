@@ -4,6 +4,7 @@ import '../styles/hero.css';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { motion } from 'framer-motion';
 import fadeIn from '../utils/variants';
+import BackgroundImage from '../assets/Hero.png';
 
 export default function Hero() {
   return (
@@ -14,6 +15,15 @@ export default function Hero() {
         whileInView="show"
         className="innerContainer"
       />
+      <motion.div
+        variants={fadeIn('left', 0.1)}
+        initial="hidden"
+        whileInView="show"
+        className="imgContainer"
+      >
+        <img src={BackgroundImage} alt="background-img" />
+      </motion.div>
+
       <motion.div
         variants={fadeIn('right', 0.1)}
         initial="hidden"

@@ -13,6 +13,10 @@
 	height: 100%;
 }
 
+.imgContainer {
+	display: none;
+}
+
 .heroContent {
 	width: 27%;
 	position: absolute;
@@ -64,3 +68,40 @@
 	color: white;
 
 } */
+
+@media (max-width: 480px) {
+	.hero {
+		width: auto;
+		/* background-color: aquamarine; */
+		height: 500px;
+	}
+
+	.innerContainer {
+		display: none;
+	}
+
+	.imgContainer {
+		display: block;
+		width: 100%;
+	}
+
+	.imgContainer img {
+		height: 225px;
+		width: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: -47px;
+	}
+
+	.heroContent {
+		width: 100%;
+		left: -5%;
+		text-align: center;
+		margin-top: 5%;
+	}
+
+	.heroContent h1 {
+		padding: 0 5%;
+	}
+}
