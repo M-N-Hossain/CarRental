@@ -39,6 +39,10 @@
 	border-radius: 5px;
 }
 
+.linkDiv button {
+	display: none;
+}
+
 .buttonDiv .signInBtn {
 	background-color: white;
 	color: red;
@@ -48,3 +52,59 @@
 	background-color: red;
 	color: white;
 } */
+
+.burgerMenuIcons {
+	display: none;
+}
+
+@media (max-width: 480px) {
+	.navbar {
+		justify-content: space-between;
+	}
+	.buttonDiv {
+		display: none;
+	}
+
+	.burgerMenuIcons {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		right: 10%;
+	}
+	.burgerMenuIcons i {
+		font-size: 1.2rem;
+	}
+
+	.linkDiv {
+		position: absolute;
+		background-color: rgb(255, 0, 0);
+		width: 100%;
+		height: 250px;
+		/* left: -150%; */
+		top: -500px;
+	}
+
+	.linkDiv.active {
+		top: 70px;
+		opacity: 1;
+		z-index: 1;
+		transition: 0.3s ease-in-out;
+	}
+
+	.linkDiv a {
+		position: relative;
+		display: block;
+		color: white;
+	}
+
+	.linkDiv a:hover {
+		background-color: white;
+		color: red;
+	}
+
+	.linkDiv button {
+		display: inline-block;
+		box-shadow: 1px 1px 3px black;
+		margin-top: 8px;
+	}
+}
