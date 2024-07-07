@@ -1,8 +1,6 @@
 .vehicle {
 	width: 100%;
 	display: flex;
-	/* justify-content: space-between; */
-	/* align-items: center; */
 	margin-top: 10%;
 }
 
@@ -21,7 +19,7 @@
 }
 
 .vehicle .vehiclePicture {
-	width: 55%;
+	width: 60%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -34,4 +32,33 @@
 
 .vehicle .vehicleDetails {
 	width: 25%;
+	position: relative;
+	/* bottom: 50px; */
+}
+
+
+.vehicleDetails .price{
+	display: flex;
+	background-color: red;
+	font-size: 22px;
+	height: 45px;
+	color: #ffffff;
+	justify-content: center;
+	border-bottom: none;
+	border-right: 1px solid red;
+	border-left: 1px solid red;
+
+}
+
+.price span:first-child{
+	font-weight: bold;
+	margin-right: 40px;
+	
+}
+
+.vehicleDetails button{
+	width: 100%;
+	margin: 8px 0 0 0;
+	border-radius: 0pc;
+	
 }
