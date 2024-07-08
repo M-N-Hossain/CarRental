@@ -67,3 +67,31 @@
 	border-radius: 0pc;
 	
 }
+
+@media (max-width: 480px){
+	.vehicle{
+		flex-direction: column;
+	}
+
+	.vehicle .listOfVehicle{
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.vehicle .listOfVehicle button{
+		width: 45%;
+	}
+
+	.vehicle .vehiclePicture{
+		width: 100%;
+		margin: 10% 0;
+
+		
+	}
+
+	.vehicle .vehicleDetails{
+		width: 100%;
+	}
+}
