@@ -17,7 +17,7 @@ export default function Vehicle({ cars }) {
             key={index}
             type="button"
             onClick={() => setSelectedCar(car)}
-            style={selectedCar.name !== car.name ? {
+            style={selectedCar.model !== car.model ? {
               backgroundColor: 'white',
               color: 'black',
             } : {}}
@@ -36,10 +36,10 @@ export default function Vehicle({ cars }) {
         <Box label="Model" separator="|" value={selectedCar.model} />
         <Box label="Mark" separator="|" value={selectedCar.mark} />
         <Box label="Year" separator="|" value={selectedCar.year} />
-        <Box label="Doors" separator="|" value="4" />
-        <Box label="AC" separator="|" value="Yes" />
-        <Box label="Transmission" separator="|" value="Manual" />
-        <Box label="Fuel" separator="|" value="Diesel" />
+        <Box label="Doors" separator="|" value={selectedCar.doors} />
+        <Box label="AC" separator="|" value={selectedCar.ac} />
+        <Box label="Transmission" separator="|" value={selectedCar.transmission} />
+        <Box label="Fuel" separator="|" value={selectedCar.fuel} />
         <button type="button">RESERVE NOW</button>
       </div>
     </div>

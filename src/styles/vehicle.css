@@ -18,6 +18,11 @@
 	
 }
 
+.vehicle .listOfVehicle button:hover{
+	background-color: red;
+	color: #ffffff;
+}
+
 .vehicle .vehiclePicture {
 	width: 60%;
 	display: flex;

@@ -1,26 +1,16 @@
 import React from 'react';
 import '../styles/vehicleModels.css';
 import Vehicle from './Vehicle';
-import car1 from '../assets/car1.png';
-import car2 from '../assets/car2.png';
-import car3 from '../assets/car3.png';
-import car4 from '../assets/car4.png';
-import car5 from '../assets/car5.png';
+import x5 from '../assets/x5.png';
+import tesla from '../assets/tesla.png';
+import mustang from '../assets/mustang.png';
+import camaro from '../assets/camaro.png';
+import civic from '../assets/civic.png';
+import a4 from '../assets/a4.png';
+import corolla from '../assets/corolla.png';
 
 export default function VehicleModels() {
   const cars = [
-    {
-      pricePerDay: '$50',
-      model: 'Tesla Model S',
-      mark: 'Tesla',
-      year: 2020,
-      doors: '4',
-      ac: 'Yes',
-      transmission: 'Yes',
-      fuel: 'Yes',
-      image: car1,
-    },
-
     {
       pricePerDay: '$45',
       model: 'Mustang',
@@ -28,21 +18,20 @@ export default function VehicleModels() {
       year: 2021,
       doors: '2',
       ac: 'Yes',
-      transmission: 'Yes',
-      fuel: 'Yes',
-      image: car2,
+      transmission: 'Manual',
+      fuel: 'Disel',
+      image: mustang,
     },
-
     {
-      pricePerDay: '$55',
-      model: 'Camaro',
-      mark: 'Chevrolet',
-      year: 2019,
+      pricePerDay: '$50',
+      model: 'Tesla Model S',
+      mark: 'Tesla',
+      year: 2020,
       doors: '4',
       ac: 'Yes',
-      transmission: 'Yes',
-      fuel: 'Yes',
-      image: car3,
+      transmission: 'Auto',
+      fuel: 'Disel',
+      image: tesla,
     },
 
     {
@@ -52,21 +41,20 @@ export default function VehicleModels() {
       year: 2018,
       doors: '4',
       ac: 'Yes',
-      transmission: 'Yes',
-      fuel: 'Yes',
-      image: car4,
+      transmission: 'Manual',
+      fuel: 'Disel',
+      image: civic,
     },
-
     {
-      pricePerDay: '$60',
-      model: 'A4',
-      mark: 'Audi',
-      year: 2021,
+      pricePerDay: '$35',
+      model: 'Corolla',
+      mark: 'Toyota',
+      year: 2017,
       doors: '4',
       ac: 'Yes',
-      transmission: 'Yes',
-      fuel: 'Yes',
-      image: car5,
+      transmission: 'Manual',
+      fuel: 'Disel',
+      image: corolla,
     },
 
     {
@@ -76,22 +64,35 @@ export default function VehicleModels() {
       year: 2022,
       doors: '4',
       ac: 'Yes',
-      transmission: 'Yes',
-      fuel: 'Yes',
-      image: car2,
+      transmission: 'Manual',
+      fuel: 'Disel',
+      image: x5,
     },
 
     {
-      pricePerDay: '$35',
-      model: 'Corolla',
-      mark: 'Toyota',
-      year: 2017,
+      pricePerDay: '$55',
+      model: 'Camaro',
+      mark: 'Chevrolet',
+      year: 2019,
+      doors: '2',
+      ac: 'Yes',
+      transmission: 'Manual',
+      fuel: 'Disel',
+      image: camaro,
+    },
+
+    {
+      pricePerDay: '$60',
+      model: 'A4',
+      mark: 'Audi',
+      year: 2021,
       doors: '4',
       ac: 'Yes',
-      transmission: 'Yes',
+      transmission: 'Auto',
       fuel: 'Yes',
-      image: car3,
+      image: a4,
     },
+
   ];
 
   return (
