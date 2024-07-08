@@ -5,6 +5,7 @@ import Booking from '../components/Booking';
 import Plans from '../components/Plans';
 import Banner from '../components/Banner';
 import VehicleModels from '../components/VehicleModels';
+import WhyUs from '../components/WhyUs';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Plans />
       <VehicleModels />
       <Banner />
+      <WhyUs />
     </div>
   );
 }

@@ -1,0 +1,54 @@
+.whyUsOuterContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 10%;
+}
+.whyUsOuterContainer .imgDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.whyUsOuterContainer .imgDiv img {
+	width: auto;
+	height: 350px;
+}
+
+.whyUsInnerContainer {
+	height: 250px;
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5%;
+}
+
+.whyUsInnerContainer .rightbar {
+	width: 45%;
+	padding: 8px;
+}
+.whyUsInnerContainer .rightbar p:first-child {
+	font-weight: bold;
+	margin: 0;
+}
+
+.whyUsInnerContainer .rightbar p {
+	margin: 10px 0;
+}
+.whyUsInnerContainer .rightbar button {
+	margin: 5px 0;
+	width: 160px;
+}
+
+.whyUsInnerContainer .leftbar {
+	width: 45%;
+	padding: 8px;
+}
+
+.whyUsInnerContainer .leftbar .subCard {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 15% 80%;
+	align-items: center;
+	justify-content: center;
+}

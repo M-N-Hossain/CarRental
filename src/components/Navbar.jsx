@@ -15,8 +15,6 @@ export default function Navbar() {
     setIsMenuItemShowing(false);
   };
 
-  console.log(isMenuItemShowing);
-
   return (
     <div className="navbar">
       {/* logo */}

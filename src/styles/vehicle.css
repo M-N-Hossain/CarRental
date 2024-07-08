@@ -86,12 +86,14 @@
 
 	.vehicle .vehiclePicture{
 		width: 100%;
-		margin: 10% 0;
-
-		
+		margin: 10% 0;		
 	}
 
 	.vehicle .vehicleDetails{
 		width: 100%;
+	}
+
+	.vehicle .vehicleDetails button:hover{
+		transform: scale(1.05);
 	}
 }

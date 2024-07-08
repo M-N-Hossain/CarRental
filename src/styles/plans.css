@@ -1,4 +1,5 @@
 .plansOuterContainer {
+	transition: 0.5s linear;
 	width: 70%;
 	position: relative;
 	left: 50%;
