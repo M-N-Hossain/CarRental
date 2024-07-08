@@ -15,7 +15,7 @@
 	margin-top: 1%;
 }
 
-.innerContainer button {
+.booking .innerContainer button {
 	width: 21%;
 	height: 40px;
 	position: relative;
@@ -96,4 +96,46 @@
 }
 .closeIcon:hover {
 	transform: scale(1.1);
+}
+
+@media (max-width: 480px){
+	.booking{
+		width: 90%;
+	}
+
+	.booking .innerContainer{
+		align-items: center;
+		justify-content: center;
+		padding-left: 0%;
+	}
+
+	.booking .innerContainer button{
+		width: 100%;
+		margin: 0;
+	}
+
+	.booking .innerContainer button:hover{
+		transform: scale(1);
+	}
+
+	.inputDiv {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.inputDiv input{
+		width: 80%;
+	}
+
+	.inputDiv select{
+		max-width: 100%;
+		width: 80%;
+	}
+
+	.label {
+		justify-content: center;
+	}
 }

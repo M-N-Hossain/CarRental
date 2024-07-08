@@ -63,17 +63,12 @@
 	height: 42.4px;
 }
 
-/* .heroContent .learnMoreBtn:hover {
-	background-color: red;
-	color: white;
-
-} */
 
 @media (max-width: 480px) {
 	.hero {
-		width: auto;
-		/* background-color: aquamarine; */
+		width: 100%;
 		height: 500px;
+		left: 0%;
 	}
 
 	.innerContainer {
@@ -91,12 +86,12 @@
 		object-fit: cover;
 		position: absolute;
 		top: 0;
-		left: -47px;
+		left: -25px;
 	}
 
 	.heroContent {
 		width: 100%;
-		left: -5%;
+		left: 0%;
 		text-align: center;
 		margin-top: 5%;
 	}
