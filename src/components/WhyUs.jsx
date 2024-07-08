@@ -5,12 +5,13 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import ConnectWithoutContactTwoToneIcon from '@mui/icons-material/ConnectWithoutContactTwoTone';
 import Card from './Card';
+import carsImg from '../assets/cars.png';
 
 export default function WhyUs() {
   return (
     <div className="whyUsOuterContainer">
       <div className="imgDiv">
-        <img src="./src/assets/cars.png" alt="" />
+        <img src={carsImg} alt="" />
       </div>
       <div className="whyUsInnerContainer">
         <div className="rightbar">
