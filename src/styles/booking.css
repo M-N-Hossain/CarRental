@@ -101,12 +101,14 @@
 @media (max-width: 480px){
 	.booking{
 		width: 90%;
+		margin-top: 5%;
 	}
 
 	.booking .innerContainer{
 		align-items: center;
 		justify-content: center;
 		padding-left: 0%;
+		margin-bottom: 18%;
 	}
 
 	.booking .innerContainer button{
