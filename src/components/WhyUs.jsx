@@ -10,7 +10,7 @@ export default function WhyUs() {
   return (
     <div className="whyUsOuterContainer">
       <div className="imgDiv">
-        <img src="src/assets/cars.png" alt="" />
+        <img src="./src/assets/cars.png" alt="" />
       </div>
       <div className="whyUsInnerContainer">
         <div className="rightbar">
