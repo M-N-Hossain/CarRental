@@ -14,7 +14,7 @@ export default function WhyUs() {
         <img src={carsImg} alt="" />
       </div>
       <div className="whyUsInnerContainer">
-        <div className="rightbar">
+        <div className="leftbar">
           <p>Why choose us</p>
           <h1>Best valued deals you will ever find</h1>
           <p>
@@ -26,7 +26,7 @@ export default function WhyUs() {
           </p>
           <button type="button">Find Details &gt;</button>
         </div>
-        <div className="leftbar">
+        <div className="rightbar">
           <Card
             clssname="subCard"
             icon={<ConnectWithoutContactTwoToneIcon className="icon" />}

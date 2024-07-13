@@ -13,3 +13,14 @@
 .banner span{
     color: red;
 }
+
+@media (max-width: 480px){
+	.banner{
+		margin-top: 20%;
+		font-size: 14px;
+		height: 100px;
+	}
+	.banner h1 {
+		font-size: 22px;
+	}
+}
