@@ -30,10 +30,13 @@
 .whyUsInnerContainer .leftbar p:first-child {
 	font-weight: bold;
 	margin: 0;
+	color: black;
 }
 
 .whyUsInnerContainer .leftbar p {
 	margin: 10px 0;
+	color: rgb(133, 133, 133);
+
 }
 .whyUsInnerContainer .leftbar button {
 	margin: 5px 0;
@@ -52,6 +55,7 @@
 	align-items: center;
 	justify-content: center;
 }
+
 
 @media (max-width: 480px){
 	.whyUsOuterContainer .imgDiv img {

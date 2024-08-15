@@ -13,7 +13,7 @@ export default function Card({
       </div>
       <div className="descDiv">
         <p className="title">{title}</p>
-        <p>
+        <p className="description">
           {desc}
         </p>
       </div>

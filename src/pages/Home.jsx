@@ -6,6 +6,7 @@ import Plans from '../components/Plans';
 import Banner from '../components/Banner';
 import VehicleModels from '../components/VehicleModels';
 import WhyUs from '../components/WhyUs';
+import Testimonials from '../components/Testimonials';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <VehicleModels />
       <Banner />
       <WhyUs />
+      <Testimonials />
     </div>
   );
 }

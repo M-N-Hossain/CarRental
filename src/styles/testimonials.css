@@ -1,0 +1,19 @@
+.testimonials {
+	text-align: center;
+	/* background-color: aqua; */
+	margin-bottom: 10%;
+}
+.testimonials .topSection {
+	width: 60%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.testimonials .topSection p:first-child {
+	font-size: 17px;
+	font-weight: bold;
+	color: black;
+}
+.testimonials .topSection p {
+	color: rgb(133, 133, 133);
+}
