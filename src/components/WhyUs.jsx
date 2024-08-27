@@ -4,7 +4,7 @@ import '../styles/whyUs.css';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import ConnectWithoutContactTwoToneIcon from '@mui/icons-material/ConnectWithoutContactTwoTone';
-import Card from './Card';
+import InfoCard from './InfoCard';
 import carsImg from '../assets/cars.png';
 
 export default function WhyUs() {
@@ -27,21 +27,21 @@ export default function WhyUs() {
           <button type="button">Find Details &gt;</button>
         </div>
         <div className="rightbar">
-          <Card
+          <InfoCard
             clssname="subCard"
             icon={<ConnectWithoutContactTwoToneIcon className="icon" />}
             title="Cross Country Drive"
             desc="Take your driving experience to the next level
             with our top-notch vehicles for your cross-country adventures."
           />
-          <Card
+          <InfoCard
             clssname="subCard"
             icon={<MonetizationOnIcon className="icon" />}
             title="All Inclusive Pricing"
             desc="Get everything you need in one convenient
             transparent price with our all-inciusive pricing policy."
           />
-          <Card
+          <InfoCard
             clssname="subCard"
             icon={<PriceChangeIcon className="icon" />}
             title="No Hidden Charges"

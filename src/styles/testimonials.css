@@ -4,7 +4,7 @@
 	margin-bottom: 10%;
 }
 .testimonials .topSection {
-	width: 60%;
+	width: 40%;
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
@@ -16,4 +16,15 @@
 }
 .testimonials .topSection p {
 	color: rgb(133, 133, 133);
+}
+
+.testimonials .bottomSection{
+	margin-top: 5%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }

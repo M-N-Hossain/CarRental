@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import '../styles/vehicle.css';
-import Box from './Box';
+import TableBox from './TableBox';
 
 export default function Vehicle({ cars }) {
   const [selectedCar, setSelectedCar] = useState(cars[0]);
@@ -32,14 +32,14 @@ export default function Vehicle({ cars }) {
       </div>
 
       <div className="vehicleDetails">
-        <Box className="price" label={selectedCar.pricePerDay} separator="/ rent per day" value="" />
-        <Box label="Model" separator="|" value={selectedCar.model} />
-        <Box label="Mark" separator="|" value={selectedCar.mark} />
-        <Box label="Year" separator="|" value={selectedCar.year} />
-        <Box label="Doors" separator="|" value={selectedCar.doors} />
-        <Box label="AC" separator="|" value={selectedCar.ac} />
-        <Box label="Transmission" separator="|" value={selectedCar.transmission} />
-        <Box label="Fuel" separator="|" value={selectedCar.fuel} />
+        <TableBox className="price" label={selectedCar.pricePerDay} separator="/ rent per day" value="" />
+        <TableBox label="Model" separator="|" value={selectedCar.model} />
+        <TableBox label="Mark" separator="|" value={selectedCar.mark} />
+        <TableBox label="Year" separator="|" value={selectedCar.year} />
+        <TableBox label="Doors" separator="|" value={selectedCar.doors} />
+        <TableBox label="AC" separator="|" value={selectedCar.ac} />
+        <TableBox label="Transmission" separator="|" value={selectedCar.transmission} />
+        <TableBox label="Fuel" separator="|" value={selectedCar.fuel} />
         <button type="button">RESERVE NOW</button>
       </div>
     </div>

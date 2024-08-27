@@ -3,7 +3,7 @@ import '../styles/plans.css';
 import CarRentalIcon from '@mui/icons-material/CarRental';
 import ConnectWithoutContactTwoToneIcon from '@mui/icons-material/ConnectWithoutContactTwoTone';
 import DriveFileMoveOutlinedIcon from '@mui/icons-material/DriveFileMoveOutlined';
-import Card from './Card';
+import InfoCard from './InfoCard';
 
 export default function Plans() {
   return (
@@ -11,19 +11,19 @@ export default function Plans() {
       <h2>Plan you trip now</h2>
       <h1>Quick & easy car rental</h1>
       <div className="plansInnerContainer">
-        <Card
+        <InfoCard
           icon={<CarRentalIcon className="icon" />}
           title="Select Car"
           desc="We offer big range of vehicles for all your driving needs.
         We have the perfect car to meet your needs"
         />
-        <Card
+        <InfoCard
           icon={<ConnectWithoutContactTwoToneIcon className="icon" />}
           title="Contact Operator"
           desc="Our knowledgeable and friendly operators are always ready
           to help with any questions and concerns"
         />
-        <Card
+        <InfoCard
           icon={<DriveFileMoveOutlinedIcon className="icon" />}
           title="Let's Drive"
           desc="Whether you're hitting the open road, we've got you covered

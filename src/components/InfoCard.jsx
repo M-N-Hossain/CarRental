@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/card.css';
 
-export default function Card({
+export default function InfoCard({
   clssname, icon, title, desc,
 }) {
   return (

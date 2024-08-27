@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/box.css';
 
-export default function Box({
+export default function TableBox({
   className, label, separator, value,
 }) {
   return (
